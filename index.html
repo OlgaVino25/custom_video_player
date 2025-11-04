@@ -45,6 +45,29 @@
         display: none !important;
       }
 
+      .time-display {
+        color: white;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+      }
+
+      .progress-container {
+        flex-grow: 1;
+        height: 5px;
+        background-color: #555;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .progress-slider {
+        height: 100%;
+        background-color: red;
+        border-radius: 2px;
+        width: 0%;
+        transition: width 0.1s;
+      }
+
       .spacer {
         flex-grow: 1;
       }
@@ -69,6 +92,15 @@
           <button class="js-pause-button control-button" hidden>
             <span class="icon-white"><i class="fa fa-pause" aria-hidden="true"></i></span>
           </button>
+
+          <span class="js-current-time time-display">0:00</span>
+          <span class="time-display">/</span>
+          <span class="js-duration time-display">0:00</span>
+
+          <div class="js-progress progress-container">
+            <div class="js-progress-slider progress-slider"></div>
+          </div>
+          
           <button class="js-volume-button control-button">
             <span class="icon-white"><i class="fa fa-volume-off" aria-hidden="true"></i></span>
           </button>
